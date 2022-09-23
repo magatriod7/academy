@@ -1,0 +1,5 @@
+//상황 관리 js
+
+export const TEST_GET_REQUEST = "test/EMPLOYER_INFO_GET_REQUEST";
+export const TEST_GET_SUCCESS = "test/EMPLOYER_INFO_GET_SUCCESS";
+export const TEST_GET_FAILURE = "test/EMPLOYER_INFO_GET_FAILURE";

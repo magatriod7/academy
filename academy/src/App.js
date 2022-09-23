@@ -1,33 +1,16 @@
-import logo from "./logo.svg";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { Sample } from "./Component/sample";
-import { Sample2 } from "./Component/sample2";
-import { Sample3 } from "./Component/sample3";
+import { ManagerPage } from "./Component/manager/manager.js";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">1</Link>
-            </li>
-            <li>
-              <Link to="/about">2</Link>
-            </li>
-            <li>
-              <Link to="/topics">3</Link>
-            </li>
-          </ul>
-
-          <Routes>
-            <Route path="/" element={<Sample />} />
-            <Route path="/about" element={<Sample2 />} />
-            <Route path="/topics" element={<Sample3 />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/manager" element={<ManagerPage />} />
+        </Routes>
       </Router>
     </div>
   );

@@ -1,25 +1,34 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
-import { ManagerSideContent } from "./managerSideContent";
+import { useParams } from "react-router-dom";
+import { ManagerSideContent } from "./managerSideContents/managerSideContent";
 import { ManagerSideMenu } from "./managerSideMenu";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { ManagerSideContentMain } from "./managerSideContents/managerSideContentMain";
 
 const managerWrap = css`
   max-width: 1920px;
   width: 100%;
   height: 100vh;
-  background-color: yellow;
+  /* background-color: yellow; */
   display: flex;
 `;
 
 export const ManagerPage = () => {
   // const selector = useSelector((state) => state);
-  const [nowPage, setNowPage] = useState("attandence");
+  const params = useParams();
+
+  useEffect(() => {
+    console.log(params["*"]);
+  }, []);
 
   return (
     <div className="managerWrap" css={managerWrap} onClick={() => {}}>
-      <ManagerSideMenu nowPage={nowPage} setNowPage={setNowPage} />
-      <ManagerSideContent />
+      <Routes>
+        <Route path="/*" element={<ManagerSideMenu params={params["*"]} />} />
+      </Routes>
+      <ManagerSideContentMain />
     </div>
   );
 };

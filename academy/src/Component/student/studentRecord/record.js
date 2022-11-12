@@ -4,14 +4,29 @@ import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import leftArrow from "../../../img/arrow_forward_ios.svg";
+import rightArrow from "../../../img/arrow_forward_ios2.svg";
+import { RecordMenu } from "./recordMenu";
+import { RecordTodayLeft } from "./recordTodayLeft";
+import { RecordTodayRight } from "./recordTodayRight";
 
 const studentContentWrap2 = css`
+  & * {
+    box-sizing: border-box;
+  }
+
+  & .sample {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    overflow: hidden;
+  }
+
   /* display: flex; */
-  height: 100%;
+  height: calc(100% - 100px);
   /* background-color: yellow; */
   display: flex;
   flex-direction: column;
-  padding: 3vh 0vh 0px 0vh;
 `;
 
 const studentContentLeftWrap = css`
@@ -49,13 +64,13 @@ const studentContentLeftWrap2 = css`
   margin: 12px 0px 43px 0px;
 `;
 const studentContentRightWrap2 = css`
-  height: 100%;
+  /* height: 100%; */
   width: 384px;
   display: flex;
   flex-direction: column;
   border: 1px solid #c8c8c8;
   border-radius: 20px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   margin-left: 24px;
 
   /* margin-left: 24px; */
@@ -100,7 +115,7 @@ const recordMenu2Wrap = css`
 `;
 
 const contentWrap = css`
-  margin: auto;
+  /* margin: auto; */
   height: 100%;
   width: 100%;
   /* background-color: black; */
@@ -204,188 +219,6 @@ const arrowCss = css`
   /* background-color: red; */
 `;
 
-export const RecordPage = () => {
-  // const selector = useSelector((state) => state);
-  const params = useParams();
-  const [menu2, setMent2] = useState("Day");
-
-  useEffect(() => {
-    // console.log(params["*"]);
-  }, []);
-
-  return (
-    <div css={studentContentWrap2}>
-      <div css={recordMenu2Wrap}>
-        <div css={RecordMenu2}>
-          <div
-            css={menu2Css}
-            className={menu2 === "Day" ? "menu2Black" : ""}
-            onClick={() => {
-              setMent2("Day");
-            }}
-          >
-            Day
-          </div>
-          <div
-            css={menu2Css}
-            className={menu2 === "Week" ? "menu2Black" : ""}
-            onClick={() => {
-              setMent2("Week");
-            }}
-          >
-            Week
-          </div>
-          <div
-            css={menu2Css}
-            className={menu2 === "Month" ? "menu2Black" : ""}
-            onClick={() => {
-              setMent2("Month");
-            }}
-          >
-            Month
-          </div>
-        </div>
-        <div css={RecordMenu2RightVoid}> 빈 페이지</div>
-      </div>
-      <div css={contentWrap}>
-        <div className="loginPage-left" css={studentContentLeftWrap}>
-          <div css={studentContentLeftWrap2}>
-            <div css={dateWrap}>
-              2022-10-12 화요일
-              <span css={dateBlue}> &nbsp;(Today)&nbsp; </span> <div>img</div>
-            </div>
-            <div css={flex} style={{ height: "100%" }}>
-              <div css={arrowCss}>leftArrow</div>
-              <div style={{ width: "100%" }}>
-                <div>
-                  <div css={titleToday}>이 날의 공부계획</div>
-                  <div>datas</div>
-                </div>
-              </div>
-              <div css={timeTableWrap}>
-                <div css={titleToday2}>
-                  <div css={totalStudyFont}>
-                    총 공부시간 <span css={totalStudyHour}> 22 : 49 Hr</span>
-                  </div>
-                </div>
-                <div css={timeTable}>
-                  <div css={tableContent}>
-                    <div css={tableContentIn}>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                      <div>1</div>
-                      <div>2</div>
-                      <div>3</div>
-                      <div>4</div>
-                      <div>5</div>
-                      <div>6</div>
-                      <div>7</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div css={arrowCss}>rightArrow</div>
-            </div>
-          </div>
-        </div>
-        <div className="loginPage-right" css={studentContentRightWrap}>
-          {/* <div css={RecordMenu2}>dasd</div> */}
-          <div css={studentContentRightWrap2}></div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const timeTableWrap = css`
   display: flex;
   flex-direction: column;
@@ -431,3 +264,26 @@ const tableContentIn = css`
     border: none;
   }
 `;
+
+export const RecordPage = () => {
+  // const selector = useSelector((state) => state);
+  const params = useParams();
+  const [menu2, setMent2] = useState("Day");
+
+  useEffect(() => {
+    // console.log(params["*"]);
+  }, []);
+
+  return (
+    <div css={studentContentWrap2}>
+      <RecordMenu />
+      {/* <div className="sample">
+        <div></div>
+      </div> */}
+      <div css={contentWrap}>
+        <RecordTodayLeft />
+        <RecordTodayRight />
+      </div>
+    </div>
+  );
+};

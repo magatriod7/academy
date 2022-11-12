@@ -25,6 +25,9 @@ const RecordMenu1Wrap = css`
   display: flex;
   border-bottom: 1px solid #c8c8c8;
   overflow: visible;
+  min-height: 80px;
+  height: 80px;
+  box-sizing: border-box;
 
   & .RecordMenu1Grey {
     color: #686868;
@@ -40,7 +43,7 @@ const RecordMenu1Wrap = css`
   }
   & .RecordMenu1Orange {
     color: #ed7700;
-    border-bottom: 3px solid #ed7700;
+    border-bottom: 1px solid #ed7700;
     position: relative;
     overflow: visible;
   }
@@ -48,9 +51,9 @@ const RecordMenu1Wrap = css`
     display: block;
     position: absolute;
     width: 100%;
-    height: 1px;
+    height: 4px;
 
-    bottom: -4px;
+    bottom: -1px;
     background-color: #ed7700;
   }
 `;
@@ -58,8 +61,8 @@ const RecordMenu1Content = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
   width: 180px;
+  height: 100%;
 
   font-family: "Spoqa Han Sans Neo";
   font-style: normal;

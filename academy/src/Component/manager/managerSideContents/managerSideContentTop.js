@@ -7,19 +7,10 @@ import logo from "../../../img/logo.svg";
 import questionBox from "../../../img/questionBox.svg";
 import { useState } from "react";
 
-const ManagerSideContentWrap = styled.div`
-  /* background-color: blue; */
-
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 24px;
-`;
 const ManagerSideContentTop = styled.div`
   display: flex;
-  height: 120px;
-  min-height: 120px;
+  height: 105px;
+  min-height: 105px;
   width: 100%;
   background-color: white;
   border-bottom: 1px solid #c8c8c8;

@@ -7,6 +7,7 @@ import logo from "../../../img/logo.svg";
 import questionBox from "../../../img/questionBox.svg";
 import { ManagerSideContentMainTop } from "./managerSideContentTop";
 import { MainContent } from "./managerSideContentAttendance";
+import { StudentDetail } from "./managetStudentDetail";
 
 const ManagerSideContentWrap = styled.div`
   /* background-color: blue; */
@@ -28,6 +29,7 @@ export const ManagerSideContentMain = () => {
       <ManagerSideContentMainTop />
       <Routes>
         <Route path="/main" element={<MainContent />}></Route>
+        <Route path="/studentDetail" element={<StudentDetail />}></Route>
       </Routes>
     </ManagerSideContentWrap>
   );

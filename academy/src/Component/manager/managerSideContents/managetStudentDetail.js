@@ -226,7 +226,7 @@ export const StudentDetail = () => {
           <div className="Font-wrap">
             <div className="info-blue-bar"></div>
             <div className="grey-font">소속</div>
-            다원고등학교
+            다원고등학교 테스트
           </div>
         </div>
       </div>
